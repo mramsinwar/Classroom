@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'doubts.apps.DoubtsConfig',
     'users.apps.UsersConfig',
     'crispy_forms',
+    'crispy_bootstrap4',
     # 'social_django',
     # 'social_login',
     # 'coverage',
@@ -129,6 +130,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
 
 LOGIN_REDIRECT_URL = 'classroom-home'
 LOGIN_URL = 'login'

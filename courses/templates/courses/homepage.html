@@ -19,7 +19,11 @@
     <nav>
       <ul>
         <li><a href="{% url 'courses-home' %}">Courses</a></li>
-        <li><a href="{% url 'register' %}">SignUp</a></li>
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'profile' %}">Profile</a></li>
+        {% else %}
+          <li><a href="{% url 'register' %}">SignUp</a></li>
+        {% endif %}
         <li><a href="{% url 'doubts-home' %}">AskUs</a></li>
         <li><a href="{% url 'emailView' %}">Contact</a></li>
       </ul>
